@@ -1,0 +1,10 @@
+# Read about how setup rich text (e.g. colors): http://digitalnativestudios.com/textmeshpro/docs/rich-text/
+# 
+# Possible params:
+# - User.DisplayName - Gets the human readable name of the actor (https://openmod.github.io/openmod-docs/api/OpenMod.API.Permissions.IPermissionActor.html#OpenMod_API_Permissions_IPermissionActor_DisplayName)
+# - User.FullActorName - Gets the full actor name including display name and ID (https://openmod.github.io/openmod-docs/api/OpenMod.API.Permissions.IPermissionActor.html#OpenMod_API_Permissions_IPermissionActor_FullActorName)
+# - User.Id - Gets the unique to the actor type and persistent ID of the actor (https://openmod.github.io/openmod-docs/api/OpenMod.API.Permissions.IPermissionActor.html#OpenMod_API_Permissions_IPermissionActor_Id)
+# - User.Type - Gets the type of the actor (https://openmod.github.io/openmod-docs/api/OpenMod.API.Permissions.IPermissionActor.html#OpenMod_API_Permissions_IPermissionActor_Type)
+
+join: "<color=white>{User.DisplayName}({User.Id})</color><color=purple> connected to the server"
+leave: "<color=white>{User.DisplayName}({User.Id})</color><color=purple> disconnected to the server"
