@@ -31,7 +31,7 @@ namespace OpenJoinLeaveMessages.Events
             var provider = @event.User.Provider;
             if (provider != null)
             {
-                return provider.BroadcastAsync(m_StringLocalizer["leave", @event.User], color);
+                return provider.BroadcastAsync(m_StringLocalizer["leave", new { @event.User }], color);
             }
 
             return Task.CompletedTask;
