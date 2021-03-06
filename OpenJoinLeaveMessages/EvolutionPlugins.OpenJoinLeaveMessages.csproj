@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageLicenseExpression>EUPL-1.2</PackageLicenseExpression>
     <PackageTags>openmod openmod-plugin universal</PackageTags>
-    <RootNamespace>OpenJoinLeaveMessages</RootNamespace>
+    <RootNamespace>EvolutionPlugins.OpenJoinLeaveMessages</RootNamespace>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <GenerateNugetPackage>true</GenerateNugetPackage>
     <Nullable>enable</Nullable>
@@ -14,6 +14,13 @@
     <Version>0.0.0</Version>
     <InformationalVersion>0.0.0</InformationalVersion>
     <PackageVersion>0.0.0</PackageVersion>
+    <PackageId>EvolutionPlugins.OpenJoinLeaveMessages</PackageId>
+    <Authors>EvolutionPlugins</Authors>
+    <Company>EvolutionPlugins</Company>
+    <RepositoryUrl>https://github.com/EvolutionPlugins/OpenJoinLeaveMessages</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageProjectUrl>https://github.com/EvolutionPlugins/OpenJoinLeaveMessages</PackageProjectUrl>
+    <Product>OpenJoinLeaveMessages</Product>
   </PropertyGroup>
 
   <ItemGroup>

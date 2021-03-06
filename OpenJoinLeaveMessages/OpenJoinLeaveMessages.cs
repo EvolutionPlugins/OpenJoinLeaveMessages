@@ -5,7 +5,7 @@ using System;
 [assembly: PluginMetadata("OpenJoinLeaveMessages", Author = "EvolutionPlugins", DisplayName = "Open Join & Leave Messages",
     Website = "https://discord.gg/5MT2yke")]
 
-namespace OpenJoinLeaveMessages
+namespace EvolutionPlugins.OpenJoinLeaveMessages
 {
     public class OpenJoinLeaveMessages : OpenModUniversalPlugin
     {

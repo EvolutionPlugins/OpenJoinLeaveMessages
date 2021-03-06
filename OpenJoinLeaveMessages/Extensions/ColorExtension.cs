@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace OpenJoinLeaveMessages.Extensions
+namespace EvolutionPlugins.OpenJoinLeaveMessages.Extensions
 {
     public static class ColorExtension
     {

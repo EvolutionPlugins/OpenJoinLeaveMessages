@@ -1,13 +1,13 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using EvolutionPlugins.OpenJoinLeaveMessages.Extensions;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Logging;
-using OpenJoinLeaveMessages.Extensions;
 using OpenMod.API.Eventing;
 using OpenMod.Core.Users.Events;
 using System.Drawing;
 using System.Threading.Tasks;
 
-namespace OpenJoinLeaveMessages.Events
+namespace EvolutionPlugins.OpenJoinLeaveMessages.Events
 {
     public class UserDisconnectedEvent : IEventListener<IUserDisconnectedEvent>
     {
