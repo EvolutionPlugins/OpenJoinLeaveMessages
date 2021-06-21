@@ -26,15 +26,15 @@ jobs:
     - name: Install dependencies
       run: dotnet restore
     - name: Update version
-      run: "sed -i \"s#<Version>0.0.0</Version>#<Version>${{ github.event.inputs.version }}</Version>#\" OpenJoinLeaveMessages/EvolutionPlugins.OpenJoinLeaveMessages.csproj"  
+      run: "sed -i \"s#<Version>0.0.0</Version>#<Version>${{ github.event.inputs.version }}</Version>#\" EvolutionPlugins.OpenJoinLeaveMessages/EvolutionPlugins.OpenJoinLeaveMessages.csproj"  
     - name: Update package version
-      run: "sed -i \"s#<PackageVersion>0.0.0</PackageVersion>#<PackageVersion>${{ github.event.inputs.version }}</PackageVersion>#\" OpenJoinLeaveMessages/EvolutionPlugins.OpenJoinLeaveMessages.csproj"  
+      run: "sed -i \"s#<PackageVersion>0.0.0</PackageVersion>#<PackageVersion>${{ github.event.inputs.version }}</PackageVersion>#\" EvolutionPlugins.OpenJoinLeaveMessages/EvolutionPlugins.OpenJoinLeaveMessages.csproj"  
     - name: Update informational version
-      run: "sed -i \"s#<InformationalVersion>0.0.0</InformationalVersion>#<InformationalVersion>${{ github.event.inputs.version }}</InformationalVersion>#\" OpenJoinLeaveMessages/EvolutionPlugins.OpenJoinLeaveMessages.csproj"              
+      run: "sed -i \"s#<InformationalVersion>0.0.0</InformationalVersion>#<InformationalVersion>${{ github.event.inputs.version }}</InformationalVersion>#\" EvolutionPlugins.OpenJoinLeaveMessages/EvolutionPlugins.OpenJoinLeaveMessages.csproj"              
     - name: Build
-      run: dotnet build EvolutionPlugins.OpenJoinLeaveMessages.csproj --configuration Release --no-restore
+      run: dotnet build EvolutionPlugins.OpenJoinLeaveMessages/EvolutionPlugins.OpenJoinLeaveMessages.csproj --configuration Release --no-restore
     - name: Deploy to NuGet
-      run: dotnet nuget push OpenJoinLeaveMessages/bin/Release/*.nupkg
+      run: dotnet nuget push EvolutionPlugins.OpenJoinLeaveMessages/bin/Release/*.nupkg
              --api-key ${{ secrets.NUGET_DEPLOY_KEY }}
              --source https://api.nuget.org/v3/index.json
     - name: Release to GitHub
