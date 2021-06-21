@@ -20,7 +20,7 @@
     <RepositoryUrl>https://github.com/EvolutionPlugins/OpenJoinLeaveMessages</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageProjectUrl>https://github.com/EvolutionPlugins/OpenJoinLeaveMessages</PackageProjectUrl>
-    <Product>OpenJoinLeaveMessages</Product>
+    <AssemblyName>EvolutionPlugins.OpenJoinLeaveMessages</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
