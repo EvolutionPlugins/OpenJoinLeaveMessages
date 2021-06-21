@@ -1,5 +1,8 @@
-# if you don't wanna use the rich text then use this to setup global color
+iconUrls:
+  join: ""
+  leave: ""
 
+# if you don't wanna use the rich text then use this to setup global color
 colors:
   join: "white"
   leave: "#2d376f"

@@ -1,4 +1,5 @@
 ﻿using EvolutionPlugins.OpenJoinLeaveMessages.Extensions;
+using EvolutionPlugins.Universal.Extras.Broadcast;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Logging;
@@ -13,28 +14,25 @@ namespace EvolutionPlugins.OpenJoinLeaveMessages.Events
     {
         private readonly IStringLocalizer m_StringLocalizer;
         private readonly IConfiguration m_Configuration;
-        private readonly ILogger<OpenJoinLeaveMessages> m_Logger;
+        private readonly ILogger<UserConnectedEvent> m_Logger;
+        private readonly IBroadcastManager m_BroadcastManager;
 
-        public UserConnectedEvent(IStringLocalizer stringLocalizer, IConfiguration configuration, ILogger<OpenJoinLeaveMessages> logger)
+        public UserConnectedEvent(IStringLocalizer stringLocalizer, IConfiguration configuration,
+            ILogger<UserConnectedEvent> logger, IBroadcastManager broadcastManager)
         {
             m_StringLocalizer = stringLocalizer;
             m_Configuration = configuration;
             m_Logger = logger;
+            m_BroadcastManager = broadcastManager;
         }
 
         public Task HandleEventAsync(object? sender, IUserConnectedEvent @event)
         {
             var color = m_Configuration["colors:join"].ParseColor(Color.White);
 
-            m_Logger.LogDebug($"[Join Event] Parsed color: {color}");
+            m_Logger.LogDebug($"Parsed color: {color}");
 
-            var provider = @event.User.Provider;
-            if (provider != null)
-            {
-                return provider.BroadcastAsync(m_StringLocalizer["join", new { @event.User }], color);
-            }
-
-            return Task.CompletedTask;
+            return m_BroadcastManager.BroadcastAsync(m_StringLocalizer["join", new { @event.User }], m_Configuration["iconUrls:join"], color);
         }
     }
 }
