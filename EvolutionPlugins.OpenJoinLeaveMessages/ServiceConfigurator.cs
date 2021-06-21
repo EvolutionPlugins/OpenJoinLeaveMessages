@@ -1,6 +1,9 @@
 ﻿using EvolutionPlugins.Universal.Extras;
+using EvolutionPlugins.Universal.Extras.Broadcast;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using OpenMod.API.Ioc;
+using OpenMod.API.Prioritization;
 
 namespace EvolutionPlugins.OpenJoinLeaveMessages
 {
@@ -8,7 +11,7 @@ namespace EvolutionPlugins.OpenJoinLeaveMessages
     {
         public void ConfigureServices(IOpenModServiceConfigurationContext openModStartupContext, IServiceCollection serviceCollection)
         {
-            serviceCollection.AddBroadcastManager();
+            serviceCollection.TryAddSingleton<IBroadcastManager, BroadcastManager>();
         }
     }
 }

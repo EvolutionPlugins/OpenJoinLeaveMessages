@@ -24,7 +24,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="EvolutionPlugins.Universal.Extras" Version="1.0.0" />
+    <PackageReference Include="EvolutionPlugins.Universal.Extras" Version="1.0.1" />
     <PackageReference Include="Legacy2CPSWorkaround" Version="1.0.0">
       <PrivateAssets>All</PrivateAssets>
     </PackageReference>
