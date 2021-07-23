@@ -1,8 +1,10 @@
 iconUrls:
   join: ""
+  firstJoin: "https://i.imgur.com/DKdbAp0.png"
   leave: ""
 
 # if you don't wanna use the rich text then use this to setup global color
 colors:
   join: "white"
+  firstJoin: "purple"
   leave: "#2d376f"

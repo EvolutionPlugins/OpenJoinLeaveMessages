@@ -8,3 +8,4 @@
 
 join: "<color=white>{User.DisplayName}({User.Id})</color><color=purple> connected to the server"
 leave: "<color=white>{User.DisplayName}({User.Id})</color><color=purple> disconnected to the server"
+firstJoin: "<color=white>{User.DisplayName}({User.Id})</color><color=purple> connected to the server <color=#FFFF00>first time!"

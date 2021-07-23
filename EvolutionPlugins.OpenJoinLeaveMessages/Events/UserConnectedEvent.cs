@@ -32,7 +32,8 @@ namespace EvolutionPlugins.OpenJoinLeaveMessages.Events
 
             m_Logger.LogDebug($"Parsed color: {color}");
 
-            return m_BroadcastManager.BroadcastAsync(m_StringLocalizer["join", new { @event.User }], m_Configuration["iconUrls:join"], color);
+            return m_BroadcastManager.BroadcastAsync(m_StringLocalizer["join", new { @event.User }],
+                m_Configuration["iconUrls:join"], color);
         }
     }
 }
