@@ -9,6 +9,10 @@ namespace EvolutionPlugins.OpenJoinLeaveMessages
     {
         public void ConfigureServices(IOpenModServiceConfigurationContext openModStartupContext, IServiceCollection serviceCollection)
         {
+            serviceCollection.Configure<BroadcastManagerOptions>(x =>
+            {
+                x.AddBroadcastProvider<DefaultBroadcastProvider>();
+            });
             serviceCollection.TryAddSingleton<IBroadcastManager, BroadcastManager>();
         }
     }
