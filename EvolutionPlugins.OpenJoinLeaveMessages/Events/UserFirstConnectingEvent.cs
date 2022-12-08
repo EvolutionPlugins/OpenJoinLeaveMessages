@@ -30,6 +30,9 @@ namespace EvolutionPlugins.OpenJoinLeaveMessages.Events
         [EventListener(Priority = EventListenerPriority.Monitor)]
         public Task HandleEventAsync(object? sender, IUserFirstConnectingEvent @event)
         {
+            if (UserHelper.ShouldIgnoreUserId(@event.User.Id))
+                return Task.CompletedTask;
+
             var color = m_Configuration["colors:firstJoin"].ParseColor(Color.White);
 
             m_Logger.LogDebug($"Parsed color: {color}");

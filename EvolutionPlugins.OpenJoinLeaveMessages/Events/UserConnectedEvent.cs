@@ -28,6 +28,9 @@ namespace EvolutionPlugins.OpenJoinLeaveMessages.Events
 
         public Task HandleEventAsync(object? sender, IUserConnectedEvent @event)
         {
+            if (UserHelper.ShouldIgnoreUserId(@event.User.Id))
+                return Task.CompletedTask;
+
             var color = m_Configuration["colors:join"].ParseColor(Color.White);
 
             m_Logger.LogDebug($"Parsed color: {color}");
